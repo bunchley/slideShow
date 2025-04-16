@@ -43,20 +43,20 @@ const addPicsToCarousel = (imageList) => {
       "carousel-slide"
     );
     newSlide.classList.add("fade");
-    const slideNumber = createDomElement(
-      newSlide,
-      "div",
-      "slide-number",
-      `${count + 1} / ${totalImages}`
-    );
+    // const slideNumber = createDomElement(
+    //   newSlide,
+    //   "div",
+    //   "slide-number",
+    //   `${count + 1} / ${totalImages}`
+    // );
     const imageSource = "." + image;
     const imgElement = createImageElement(newSlide, imageSource);
-    const imageText = createDomElement(
-      newSlide,
-      "div",
-      "image-text",
-      "Caption"
-    );
+    // const imageText = createDomElement(
+    //   newSlide,
+    //   "div",
+    //   "image-text",
+    //   "Caption"
+    // );
     count++;
   });
 };
@@ -75,11 +75,9 @@ const addButtonsToCarousel = () => {
     ">"
   );
   prevButton.addEventListener("click", () => {
-    console.log("Previous button clicked");
     SlideManager.showPreviousSlide();
   });
   nextButton.addEventListener("click", () => {
-    console.log("Next button clicked");
     SlideManager.showNextSlide();
   });
 };

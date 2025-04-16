@@ -7,10 +7,8 @@ const slideManager = (() => {
     showSlides((slideIndex += 1));
   };
   const showSlides = (n) => {
-    console.log("showSlides called with n:", n);
     const slides = document.getElementsByClassName("carousel-slide");
     const dots = document.querySelectorAll(".dot");
-    console.log("dots:", dots);
     const totalSlides = slides.length;
     if (n > totalSlides) {
       slideIndex = 1;
@@ -25,8 +23,10 @@ const slideManager = (() => {
       dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
-    console.log(dots[slideIndex - 1]);
     dots[slideIndex - 1].className += " active";
+    setTimeout(() => {
+      showSlides((slideIndex += 1));
+    }, 5000); // Change slide every 5 seconds
   };
 
   return {
