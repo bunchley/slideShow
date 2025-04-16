@@ -21,6 +21,7 @@
   "main": "index.js",
   "scripts": {
     "prod": "webpack --config webpack.config.js",
+    "build": "webpack --watch",
     "dev": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

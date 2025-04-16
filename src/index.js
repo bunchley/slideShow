@@ -1,4 +1,15 @@
 import "./style.css";
-import { greeting } from "./greeting.js";
+import { DisplayManager } from "./displayManager.js";
+import ImageArray from "./imageManager.js";
 
-console.log(greeting);
+const imageList = ImageArray.getArray();
+
+DisplayManager.renderCarousel(imageList);
+// const imageContainer = document.querySelector(".image-container");
+// if (imageList && imageList.length > 0) {
+//   //   console.log(imageList);
+// } else {
+//   console.log("No images found");
+// }
+// imageContainer.innerHTML = imageList;
+// console.log(ImageArray.getArray());
